@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+// const new_listings = await getCollection("new_col");
+const new_listings = await getCollection("new_col");
+---
+
+<body>
+  <div>
+    <ul>
+      {
+        new_listings.map((item) => {
+          return (
+            <li>
+              <a href={`/newl/${item.id}`}>{item.data.name} </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</body>
