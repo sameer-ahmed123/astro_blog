@@ -16,13 +16,4 @@ const blog = defineCollection({
 });
 
 
-const new_col = defineCollection({
-	// loader: glob({base: "./src/content/new_col", pattern: "**/*.{md,mdx}"}),
-	schema: z.object({
-		name: z.string(),
-		age: z.number(),
-		height: z.string()
-	})
-})
-
-export const collections = { blog ,new_col};
+export const collections = { blog };
